@@ -1,5 +1,6 @@
 import { Link, routes } from '@redwoodjs/router'
-import TodoApp from 'src/components/TodoApp/TodoApp'
+
+import Todoform from 'src/components/Todoform/Todoform'
 import TodoAppLayout from 'src/layouts/TodoAppLayout/TodoAppLayout'
 
 const HomePage = () => {
@@ -8,7 +9,7 @@ const HomePage = () => {
       <h1>HomePage</h1>
 
       <p> create a todo card </p>
-      <TodoApp />
+      <Todoform inputName="Title" submit="Create Todo Card" />
       <Link to={routes.todoCard()}>link to add tasks</Link>
     </TodoAppLayout>
   )
