@@ -1,11 +1,11 @@
 import { render } from '@redwoodjs/testing'
 
-import TodoApp from './TodoApp'
+import Todoform from './Todoform'
 
-describe('TodoApp', () => {
+describe('Todoform', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<TodoApp />)
+      render(<Todoform />)
     }).not.toThrow()
   })
 })
