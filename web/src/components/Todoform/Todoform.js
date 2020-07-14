@@ -1,22 +1,17 @@
 import { Form, Submit, TextField, FieldError } from '@redwoodjs/web'
-import { Link, routes } from '@redwoodjs/router'
+//import { Link, routes } from '@redwoodjs/router'
 
-const Todoform = ({ submit, inputName }) => {
+const Todoform = ({ submit, inputName, handleData }) => {
   const handleSubmit = (data) => {
-    console.log(data)
+    handleData({ ...data })
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className="form">
       <TextField name={inputName} validation={{ required: true }} />
       <FieldError name={inputName} />
-      <Submit>
-        {submit === 'Create Todo Card' ? (
-          <Link to={routes.todoCard()}>{submit}</Link>
-        ) : (
-          submit
-        )}
-      </Submit>
+
+      <Submit>{submit}</Submit>
     </Form>
   )
 }
